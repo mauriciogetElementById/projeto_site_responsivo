@@ -34,6 +34,7 @@ header {
     width: 80px;
     height: 80px;
     background-color: #b28756;
+    border-radius: 40px;
 }
 
 
@@ -86,17 +87,58 @@ header {
 .banner {
    /* height: 100vh;  100vh é o tamanho total do monitor, mas é preciso subtrair 100px que é o tamanho do manu*/
    height: calc(100vh - 100px); /*o atributo calc permite fazer operações matematica basica*/
-   background-color: #333;
-   background-image: url('../arquivos_site/complementos/bg.jpg');
+   background-color: #333; /*primeiro coloquei um fundo cinza pra carregar antes da imagem*/
+   background-image: url('../arquivos_site/complementos/bg.jpg'); /* ../ volta uma pasta*/
    background-size: cover; /*background-cover ajusta a imagem bg.jpg para tomat todo espaço*/
    background-position: center; /*background position atributo bottom faz destacar a parte inferior da imagem e center a parte central*/
+   overflow: hidden; /* A propriedade Overflow de atributo hidden vai ocultar tudo que esta passando mais de uma pagina, entao nesse caso não tera barra de rolagem lateral*/ 
 }
 
-/*.banner .sliders {  
-    width: 100vw;
+.banner .sliders {  
+    width: 1000vw; /*100vw ocupa toda area width da pagina, e 100vh ocupa toda area height da pagina. Entao se colocarmos 1000vw são 10 pg laterais.*/
     height: 100%;
 }
 
 .banner .slide {
+    width: 100vw;
+    height: 100%;
+    display: inline-block; /*o inline-bloque faz a div se comportar como atributo inline mas continua sendo um bloque, ou seja isso faz ficar uma div ao lado da outra, criando assim a barra de rolagem lateral*/
+    background-color: rgba(0, 0, 0, 0.8); /* Escurecendo o banner*/
+}
 
+.banner .slidearea {
+    display: flex;
+    flex-direction: column; /* Altera a propriedade do Display:flex; para coluna, ou seja, para ficar o h2 abaixo do h1  */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.banner h1 {
+    text-transform: uppercase; /*Vai mudar a fonte pra caixa alta(maiúscula)*/
+    font-weight: bold; /* Fonte em negrito */
+    font-size: 45px; /*Esse é o tamanho da fonte*/
+}
+
+.banner h1 span {
+    color: #e68a20;
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.banner a {
+    display: block;
+    background-color: #e68a20;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none; /* Retira a linha abaixo das letras que caracteriza link */
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
 }
