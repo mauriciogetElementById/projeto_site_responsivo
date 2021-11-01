@@ -168,5 +168,52 @@ header {
     background-color: #e68a20;
 }
 .section_padrao{
-    background-color: red;
+    background-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
+
+.section_padrao .section_titulo, .section_padrao .section_descricao {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section_padrao .section_titulo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.section_padrao .section_descricao {
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.section_padrao .section_corpo {
+    max-width: 1140px;  /*Aqui estou definindo a mesma largura maxima do menu, para padronizar todo site*/
+    margin: auto;
+}
+
+.section_padrao.claro {
+    background-color: #f7f7f7;
+}
+
+.section_padrao.claro .section_titulo, 
+.section_padrao.claro .section_corpo {
+    color: #000;
+}
+
+.section_padrao.escuro {
+    background-color: #000;
+}
+
+.section_padrao.escuro .section_titulo,
+.section_padrao.escuro .section_corpo {
+    color: #fff;
+}
+
+
+
+/*Css da 
