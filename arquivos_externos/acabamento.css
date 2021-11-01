@@ -7,6 +7,7 @@
 body {
     font-family: 'Montserrat', Arial, Helvetica, Sans-Serif;
     font-size: 13px;
+    overflow-x: hidden; /*Todo conteúdo que passar a horizontal vai ser ignorado com esse atributo, para aparecer apenas barra vertical*/
 }
 
 /*CSS rules to specify families*/
@@ -141,4 +142,31 @@ header {
     padding: 10px 30px;
     margin-top: 30px;
     border-radius: 20px;
+}
+
+.banner .pontos_slide {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .ponto{  /*Configuração dos três pontos para rolar para o lado, posteriormente será necessario usar o Javascript*/
+    width: 15px;
+    height: 15px;
+    border: 2px solid #e68a20;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer; /*para aparecer uma mãozinho quando passar o mouse em cima do ponto*/
+}
+
+.banner .ponto.acionado1{   /*E possivel usar duas classes no mesmo elemento, aqui estou preenchendo o ponto que estiver acionado, tive que usar essa nova classe para preencher apenas o ponto que estiver selecionado. Será necessário usar uma condição no javascript depois*/
+    background-color: #e68a20;
+}
+.section_padrao{
+    background-color: red;
 }
